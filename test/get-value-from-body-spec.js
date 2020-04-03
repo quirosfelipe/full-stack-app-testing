@@ -10,12 +10,11 @@ describe("The getValueFromBody function", () => {
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
-
-
+    const result = getValueFromBody(body, key);
     // Assert
     // Replace the fail line with an assertion for the
     // expected value of ""
-    expect.fail('please write this test');
+    expect(result).to.equal("");
   });
 
   it('returns an empty string for a body without the key', () => {
@@ -26,42 +25,40 @@ describe("The getValueFromBody function", () => {
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
-
+    const result = getValueFromBody(body, key);
 
     // Assert
     // Replace the fail line with an assertion for the
     // expected value of ""
-    expect.fail('please write this test');
+    expect(result).to.equal("");
   });
 
   it('returns the value of the key in a simple body', () => {
     const body = "name=Bess";
     const key = "name";
-
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
-
-
+    const result = getValueFromBody(body, key);
     // Assert
     // Replace the fail line with an assertion for the
     // expected value of "Bess"
-    expect.fail('please write this test');
+    expect(result).to.equal("Bess");
   });
 
   it('returns the value of the key in a complex body', () => {
     const body = "name=Bess&age=29&job=Boss";
     // Select one of the keys in the body
-
+    const key = "job"
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
-
+    const result = getValueFromBody(body, key);
 
     // Assert
     // Replace the fail line with an assertion for the
     // expected value for the key that you selected
-    expect.fail('please write this test');
+    expect(result).to.equal("Boss");
   });
 
   it('decodes the return value of URL encoding', () => {
@@ -71,12 +68,12 @@ describe("The getValueFromBody function", () => {
     // Act
     // Write code to invoke getValueFromBody and collect
     // the result
-
+    const result = getValueFromBody(body, key);
 
     // Assert
     // Replace the fail line with an assertion for the
     // expected value for the key that you selected that
     // has the encoded value in it
-    expect.fail('please write this test');
+    expect(result).to.equal("Level Thirty-One");
   });
 });
